@@ -1,0 +1,2 @@
+# FuseBitDoctrorAdapters
+ Adapters for AtmegaFusebitDoctor
