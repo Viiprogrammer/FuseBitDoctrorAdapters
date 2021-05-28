@@ -14,7 +14,7 @@ Comment3 ""
 Comment4 ""
 $EndDescr
 Text GLabel 4300 2000 0    50   Input ~ 0
-+12V_RESET
+RESET
 Wire Wire Line
 	4300 2000 4400 2000
 Text GLabel 4300 2200 0    50   Input ~ 0
@@ -44,22 +44,8 @@ Text GLabel 5700 2100 2    50   Input ~ 0
 DATA1
 Wire Wire Line
 	5700 2100 5600 2100
-Text GLabel 5700 2200 2    50   Input ~ 0
-DATA2
 Wire Wire Line
 	5700 2200 5600 2200
-Wire Wire Line
-	5700 2300 5600 2300
-Text GLabel 5700 2300 2    50   Input ~ 0
-DATA3
-Text GLabel 5700 2400 2    50   Input ~ 0
-DATA4
-Text GLabel 5700 2500 2    50   Input ~ 0
-DATA5
-Wire Wire Line
-	5600 2400 5700 2400
-Wire Wire Line
-	5600 2500 5700 2500
 Text GLabel 5700 2700 2    50   Input ~ 0
 DATA6
 Text GLabel 5700 2800 2    50   Input ~ 0
@@ -216,7 +202,7 @@ PAG
 Wire Wire Line
 	6950 2200 6850 2200
 Text GLabel 6850 3200 0    50   Input ~ 0
-+12V_RESET
+RESET
 Wire Wire Line
 	6850 3200 6950 3200
 Text GLabel 6850 2900 0    50   Input ~ 0
@@ -249,4 +235,195 @@ F 3 "" H 6900 3000 50  0001 C CNN
 $EndComp
 Wire Wire Line
 	6900 3000 6950 3000
+$Comp
+L Connector:AVR-ISP-6 J2
+U 1 1 60AF4D40
+P 6119 5099
+F 0 "J2" H 5789 5195 50  0000 R CNN
+F 1 "ISP" H 5789 5104 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_2x03_P2.54mm_Vertical" V 5869 5149 50  0001 C CNN
+F 3 " ~" H 4844 4549 50  0001 C CNN
+	1    6119 5099
+	-1   0    0    -1  
+$EndComp
+Text GLabel 6045 2565 2    50   Input ~ 0
+DATA4
+Wire Wire Line
+	5600 2400 6010 2400
+Text GLabel 6045 2465 2    50   Input ~ 0
+MISO
+Text GLabel 6056 2352 2    50   Input ~ 0
+MOSI
+Text GLabel 5700 2200 2    50   Input ~ 0
+DATA2
+Wire Wire Line
+	6045 2465 6010 2465
+Wire Wire Line
+	6010 2465 6010 2400
+Wire Wire Line
+	6010 2465 6010 2565
+Wire Wire Line
+	6010 2565 6045 2565
+Connection ~ 6010 2465
+Text GLabel 6057 2250 2    50   Input ~ 0
+DATA3
+Wire Wire Line
+	6019 2300 6019 2250
+Wire Wire Line
+	6019 2250 6057 2250
+Wire Wire Line
+	5600 2300 6019 2300
+Wire Wire Line
+	6056 2352 6019 2352
+Wire Wire Line
+	6019 2352 6019 2300
+Connection ~ 6019 2300
+Text GLabel 6046 2774 2    50   Input ~ 0
+SCK
+Text GLabel 6047 2672 2    50   Input ~ 0
+DATA5
+Wire Wire Line
+	6046 2774 6009 2774
+Wire Wire Line
+	6009 2672 6047 2672
+Wire Wire Line
+	5958 2500 5958 2608
+Wire Wire Line
+	5958 2608 6009 2608
+Wire Wire Line
+	5600 2500 5958 2500
+Wire Wire Line
+	6009 2608 6009 2672
+Connection ~ 6009 2672
+Wire Wire Line
+	6009 2672 6009 2774
+Text GLabel 5683 4899 0    50   Input ~ 0
+MISO
+Text GLabel 5682 4999 0    50   Input ~ 0
+MOSI
+Text GLabel 5650 5099 0    50   Input ~ 0
+SCK
+Wire Wire Line
+	5719 5099 5650 5099
+Wire Wire Line
+	5683 4899 5719 4899
+Wire Wire Line
+	5719 4999 5682 4999
+Text GLabel 5650 5199 0    50   Input ~ 0
+RESET
+Wire Wire Line
+	5719 5199 5650 5199
+$Comp
+L power:GND #PWR0105
+U 1 1 60B56BC6
+P 6219 5531
+F 0 "#PWR0105" H 6219 5281 50  0001 C CNN
+F 1 "GND" H 6224 5358 50  0000 C CNN
+F 2 "" H 6219 5531 50  0001 C CNN
+F 3 "" H 6219 5531 50  0001 C CNN
+	1    6219 5531
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+5V #PWR0106
+U 1 1 60B574EF
+P 6219 4566
+F 0 "#PWR0106" H 6219 4416 50  0001 C CNN
+F 1 "+5V" H 6234 4739 50  0000 C CNN
+F 2 "" H 6219 4566 50  0001 C CNN
+F 3 "" H 6219 4566 50  0001 C CNN
+	1    6219 4566
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6219 4566 6219 4599
+Wire Wire Line
+	6219 5531 6219 5499
+$Comp
+L Device:LED D2
+U 1 1 60B87E9D
+P 4000 3261
+F 0 "D2" V 3947 3341 50  0000 L CNN
+F 1 "LED" V 4038 3341 50  0000 L CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 4000 3261 50  0001 C CNN
+F 3 "~" H 4000 3261 50  0001 C CNN
+	1    4000 3261
+	0    1    1    0   
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 60B8D8E2
+P 3664 3257
+F 0 "D1" V 3611 3337 50  0000 L CNN
+F 1 "LED" V 3702 3337 50  0000 L CNN
+F 2 "LED_SMD:LED_0805_2012Metric_Pad1.15x1.40mm_HandSolder" H 3664 3257 50  0001 C CNN
+F 3 "~" H 3664 3257 50  0001 C CNN
+	1    3664 3257
+	0    1    1    0   
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 60B93CD4
+P 3836 3504
+F 0 "#PWR0107" H 3836 3254 50  0001 C CNN
+F 1 "GND" H 3841 3331 50  0000 C CNN
+F 2 "" H 3836 3504 50  0001 C CNN
+F 3 "" H 3836 3504 50  0001 C CNN
+	1    3836 3504
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3664 3407 3664 3504
+Wire Wire Line
+	3664 3504 3836 3504
+Wire Wire Line
+	3836 3504 4000 3504
+Wire Wire Line
+	4000 3504 4000 3411
+Connection ~ 3836 3504
+Text GLabel 3589 2663 0    50   Input ~ 0
+RESET
+$Comp
+L Device:R_Small R2
+U 1 1 60BA6720
+P 4000 2965
+F 0 "R2" H 4059 3011 50  0000 L CNN
+F 1 "1К" H 4059 2920 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 4000 2965 50  0001 C CNN
+F 3 "~" H 4000 2965 50  0001 C CNN
+	1    4000 2965
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R1
+U 1 1 60BA4C2B
+P 3664 2962
+F 0 "R1" H 3723 3008 50  0000 L CNN
+F 1 "1К" H 3723 2917 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric_Pad1.20x1.40mm_HandSolder" H 3664 2962 50  0001 C CNN
+F 3 "~" H 3664 2962 50  0001 C CNN
+	1    3664 2962
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3664 3107 3664 3062
+Wire Wire Line
+	4000 3065 4000 3111
+Wire Wire Line
+	3664 2862 3664 2663
+Wire Wire Line
+	3664 2663 3589 2663
+$Comp
+L power:+5V #PWR0108
+U 1 1 60BBC980
+P 4000 2832
+F 0 "#PWR0108" H 4000 2682 50  0001 C CNN
+F 1 "+5V" H 4015 3005 50  0000 C CNN
+F 2 "" H 4000 2832 50  0001 C CNN
+F 3 "" H 4000 2832 50  0001 C CNN
+	1    4000 2832
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4000 2865 4000 2832
 $EndSCHEMATC
